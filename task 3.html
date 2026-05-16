@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home Automation</title>
+
+<style>
+body{font-family:Arial;background:#121212;color:white;text-align:center;}
+.box{width:400px;margin:auto;margin-top:40px;background:#1e1e1e;padding:20px;border-radius:10px;}
+button{padding:10px;margin:5px;border:none;}
+.on{background:#00ff99;}
+.off{background:#ff4444;color:white;}
+.card{background:#2d2d2d;margin-top:10px;padding:10px;border-radius:8px;}
+</style>
+</head>
+<body>
+
+<div class="box">
+
+<h2>Bluetooth Home Automation</h2>
+
+<button class="on" onclick="on()">Turn ON Light</button>
+<button class="off" onclick="off()">Turn OFF Light</button>
+
+<div id="out"></div>
+
+</div>
+
+<script>
+function on(){
+    out.innerHTML = `<div class="card">💡 Light ON (Bluetooth Command Sent)</div>`;
+}
+
+function off(){
+    out.innerHTML = `<div class="card">💡 Light OFF (Bluetooth Command Sent)</div>`;
+}
+</script>
+
+</body>
+</html>

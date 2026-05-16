@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Temperature Sensor</title>
+
+<style>
+body{font-family:Arial;background:#121212;color:white;text-align:center;}
+.box{width:400px;margin:auto;margin-top:40px;background:#1e1e1e;padding:20px;border-radius:10px;}
+button{padding:10px;background:#00ff99;border:none;}
+.card{background:#2d2d2d;margin-top:10px;padding:10px;border-radius:8px;}
+</style>
+</head>
+<body>
+
+<div class="box">
+
+<h2>Temperature Sensor</h2>
+
+<button onclick="readTemp()">Read Temperature</button>
+
+<div id="out"></div>
+
+</div>
+
+<script>
+function readTemp(){
+
+    let temp = (Math.random()*40).toFixed(1);
+
+    let status = "";
+
+    if(temp < 20) status = "❄ Cold";
+    else if(temp < 30) status = "🌤 Normal";
+    else status = "🔥 Hot";
+
+    out.innerHTML = `
+    <div class="card">Temperature: ${temp}°C</div>
+    <div class="card">Status: ${status}</div>
+    `;
+}
+</script>
+
+</body>
+</html>

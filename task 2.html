@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Button Counter</title>
+
+<style>
+body{font-family:Arial;background:#121212;color:white;text-align:center;}
+.box{width:300px;margin:auto;margin-top:50px;background:#1e1e1e;padding:20px;border-radius:10px;}
+button{padding:15px;background:#00ff99;border:none;}
+.card{background:#2d2d2d;margin-top:10px;padding:10px;border-radius:8px;}
+</style>
+</head>
+<body>
+
+<div class="box">
+
+<h2>Push Button Counter</h2>
+
+<button onclick="count()">PRESS</button>
+
+<div id="out"></div>
+
+</div>
+
+<script>
+let c = 0;
+
+function count(){
+    c++;
+    out.innerHTML = `<div class="card">Count: ${c}</div>`;
+}
+</script>
+
+</body>
+</html>

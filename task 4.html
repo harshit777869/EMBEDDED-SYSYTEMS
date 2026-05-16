@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Speech Recognition</title>
+
+<style>
+body{font-family:Arial;background:#121212;color:white;text-align:center;}
+.box{width:400px;margin:auto;margin-top:40px;background:#1e1e1e;padding:20px;border-radius:10px;}
+button{padding:10px;background:#00ff99;border:none;}
+.card{background:#2d2d2d;margin-top:10px;padding:10px;border-radius:8px;}
+</style>
+</head>
+<body>
+
+<div class="box">
+
+<h2>Speech Recognition System</h2>
+
+<button onclick="listen()">Start Listening</button>
+
+<div id="out"></div>
+
+</div>
+
+<script>
+function listen(){
+
+    let commands = ["Turn on light", "Turn off fan", "Play music", "Stop device"];
+
+    let cmd = commands[Math.floor(Math.random()*commands.length)];
+
+    out.innerHTML = `
+    <div class="card">🎤 Recognized Command: ${cmd}</div>
+    <div class="card">⚡ Device Executed Successfully</div>
+    `;
+}
+</script>
+
+</body>
+</html>
